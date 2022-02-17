@@ -11,9 +11,13 @@
 // Media();
 
 //Ex5
+// Arredonda();
 
 // Ex6
 // NomeAoContrario();
+
+//Ex7
+// MediaAluno();
 
 void HelloWorld(){
     Console.WriteLine("Hello World");
@@ -48,13 +52,10 @@ void Media(){
 
 void Arredonda(){
     Console.WriteLine("Digite um numero que deseja arredondar:");
-    var numero = Console.ReadLine();
+    var numero = float.Parse(Console.ReadLine());
     
-
-    var numeroArredondato = double.Parse(numero);
-   Console.WriteLine(numeroArredondato);
+   Console.WriteLine(Math.Round(numero));
    
-
 };
 
 void NomeAoContrario(){
@@ -65,4 +66,17 @@ void NomeAoContrario(){
     Console.WriteLine($"Seu nome possui {nome.Length} e fica {nomeInvertido} ao contrario ");
     
 }
-NomeAoContrario();
+
+void MediaAluno(){
+
+    Console.WriteLine("Digite sua nota :");
+    var nota1 = float.Parse(Console.ReadLine());
+    Console.WriteLine("Digite sua nota :");
+    var nota2 = float.Parse(Console.ReadLine());
+    Console.WriteLine("Digite sua nota :");
+    var nota3 = float.Parse(Console.ReadLine());
+
+    var media = (nota1 + nota2+nota3)/3;
+    Console.WriteLine($"Sua média final é {media.ToString("F")}");
+}
+
