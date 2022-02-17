@@ -7,6 +7,8 @@
 //Ex 3
 // CompleteName();
 
+//Ex4 
+// Media();
 void HelloWorld(){
     Console.WriteLine("Hello World");
 };
@@ -27,3 +29,14 @@ void CompleteName(){
     
 };
 
+void Media(){
+
+    var nota1 = 8;
+    var nota2 = 5;
+    var nota3 = 6;
+
+    var media = (nota1 + nota2 + nota3)/3;
+    Console.WriteLine(media);
+}
+
+Media();
