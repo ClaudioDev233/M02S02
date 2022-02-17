@@ -9,6 +9,12 @@
 
 //Ex4 
 // Media();
+
+//Ex5
+
+// Ex6
+// NomeAoContrario();
+
 void HelloWorld(){
     Console.WriteLine("Hello World");
 };
@@ -39,4 +45,24 @@ void Media(){
     Console.WriteLine(media);
 }
 
-Media();
+
+void Arredonda(){
+    Console.WriteLine("Digite um numero que deseja arredondar:");
+    var numero = Console.ReadLine();
+    
+
+    var numeroArredondato = double.Parse(numero);
+   Console.WriteLine(numeroArredondato);
+   
+
+};
+
+void NomeAoContrario(){
+    Console.WriteLine("Digite seu Nome");
+
+    var nome = Console.ReadLine();
+    var nomeInvertido = new string(nome.Reverse().ToArray());
+    Console.WriteLine($"Seu nome possui {nome.Length} e fica {nomeInvertido} ao contrario ");
+    
+}
+NomeAoContrario();
