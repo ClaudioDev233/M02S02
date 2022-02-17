@@ -80,3 +80,18 @@ void MediaAluno(){
     Console.WriteLine($"Sua média final é {media.ToString("F")}");
 }
 
+void Fatorial(){
+
+    Console.WriteLine("Digite um número de 1 a 10");
+    var numero = int.Parse(Console.ReadLine());
+    Console.WriteLine("-----------------");
+    if(numero < 0 || numero > 10)
+    Console.WriteLine("Numero não aceito");
+    else 
+
+    for ( int num = 10 ; num <= 1 ; num++){
+        Console.WriteLine(num);
+    }
+
+}
+Fatorial();
