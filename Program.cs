@@ -84,13 +84,15 @@ void Fatorial(){
 
     Console.WriteLine("Digite um número de 1 a 10");
     var numero = int.Parse(Console.ReadLine());
+   var fatorial = numero;
     Console.WriteLine("-----------------");
     if(numero < 0 || numero > 10)
     Console.WriteLine("Numero não aceito");
     else 
+    
 
-    for ( int num = 10 ; num <= 1 ; num++){
-        Console.WriteLine(num);
+    for ( int i = numero -1  ; i >= 0 ; i--){
+        Console.WriteLine( fatorial *= i );
     }
 
 }
