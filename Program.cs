@@ -19,6 +19,11 @@
 //Ex7
 // MediaAluno();
 
+//Ex8
+// Fatorial();
+
+//Ex9
+//Pizza();
 void HelloWorld(){
     Console.WriteLine("Hello World");
 };
@@ -96,4 +101,22 @@ void Fatorial(){
     }
 
 }
-Fatorial();
+
+void Pizza(){
+
+    var pedaco = 0;
+     var pizza ="";
+    
+
+     while (pizza != "0"){
+Console.WriteLine("Escolha um sabor de pizza: Digite 1 para Mussarela, 2 Para Calabresa e 3 para Portuguesa, se estiver satisfeito digite 0");
+   pizza = (Console.ReadLine());
+    
+    if(pizza !="0")
+    pedaco+=1 ;
+     else
+Console.WriteLine($"Você comeu {pedaco} pedaços");
+        
+    
+}}
+
