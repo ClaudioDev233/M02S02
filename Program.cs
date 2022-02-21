@@ -57,9 +57,9 @@ void Media(){
 
 void Arredonda(){
     Console.WriteLine("Digite um numero que deseja arredondar:");
-    var numero = float.Parse(Console.ReadLine());
-    
-   Console.WriteLine(Math.Round(numero));
+    var numeroArredondado =1;
+    var numero = Int32.TryParse(Console.ReadLine(), out numeroArredondado);
+   Console.WriteLine(numeroArredondado);
    
 };
 
