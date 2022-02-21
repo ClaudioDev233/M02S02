@@ -116,7 +116,28 @@ Console.WriteLine("Escolha um sabor de pizza: Digite 1 para Mussarela, 2 Para Ca
     pedaco+=1 ;
      else
 Console.WriteLine($"Você comeu {pedaco} pedaços");
-        
-    
 }}
 
+
+void TodasNotas(){
+    Random numero = new Random();
+    List <int> notas = new List <int>(); 
+    List <string> alunos = new List <string>(); 
+    var nota = 0;
+    var aluno = 0;
+    var coisinho = 0;
+    for( nota = 0 ; nota <= 29; nota ++){ 
+     notas.Add(numero.Next(11));
+    }
+   
+   for( aluno = 0 ; aluno <= 29; aluno ++){ 
+     alunos.Add("aluno" + aluno);
+     
+    }
+
+   for( coisinho =0 ; coisinho <= 29; coisinho ++){
+       Console.WriteLine($"A nota do aluno {alunos[coisinho]} é {notas[coisinho]}");
+   }
+
+}
+TodasNotas();
