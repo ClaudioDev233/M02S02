@@ -24,6 +24,13 @@
 
 //Ex9
 //Pizza();
+
+//Ex10
+//TodasNotas();
+
+//Ex11
+// Reverso();
+
 void HelloWorld(){
     Console.WriteLine("Hello World");
 };
@@ -118,7 +125,6 @@ Console.WriteLine("Escolha um sabor de pizza: Digite 1 para Mussarela, 2 Para Ca
 Console.WriteLine($"Você comeu {pedaco} pedaços");
 }}
 
-
 void TodasNotas(){
     Random numero = new Random();
     List <int> notas = new List <int>(); 
@@ -166,4 +172,25 @@ var media = 0;
     Console.WriteLine($"O aluno com a maior nota é {indiceMaiorNota} : {maiorNotaPossivel}");
     Console.WriteLine($"A média da turma é : {media/notas.Count}");
 }
-TodasNotas();
+
+void Reverso(){
+    List <string> numeros = new List <string>();
+    var numeroArray = 0;
+
+    Console.WriteLine("Quantos numeros deseja inserir no array?");
+        var numero = Int32.TryParse(Console.ReadLine(), out numeroArray);
+   
+
+    for( int i = 0 ; i < numeroArray; i++){
+        Console.WriteLine("Digite o numero que deseja adicionar no array:");
+        var numeroAdicionado = Console.ReadLine();
+        numeros.Add(numeroAdicionado);
+       
+    }    
+ Console.WriteLine("----------------");
+    numeros.Reverse();
+
+    foreach( var num in numeros){
+        Console.WriteLine(num);
+    }
+}
