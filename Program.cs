@@ -142,7 +142,14 @@ void TodasNotas(){
        maiorNota.Add(notas[i]);
        alunoMaiorNota.Add(alunos[i]);
    }
+
+var media = 0;
+   foreach(int todasNotas in notas){
+       media+= todasNotas;
+      Console.WriteLine(todasNotas);
+   }
     
-    Console.WriteLine($"O aluno com a maior nota é o aluno {alunoMaiorNota} e sua nota é{maiorNota} ");
+    Console.WriteLine($"A média da turma é : {media/notas.Count}");
+    
 }
 TodasNotas();
