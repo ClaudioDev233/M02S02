@@ -123,21 +123,26 @@ void TodasNotas(){
     Random numero = new Random();
     List <int> notas = new List <int>(); 
     List <string> alunos = new List <string>(); 
+
+    List <int> maiorNota = new List <int>();
+    List <string> alunoMaiorNota = new List <string>();
     var nota = 0;
     var aluno = 0;
-    var coisinho = 0;
+    var i = 0;
+
     for( nota = 0 ; nota <= 29; nota ++){ 
      notas.Add(numero.Next(11));
     }
    
    for( aluno = 0 ; aluno <= 29; aluno ++){ 
      alunos.Add("aluno" + aluno);
-     
     }
-
-   for( coisinho =0 ; coisinho <= 29; coisinho ++){
-       Console.WriteLine($"A nota do aluno {alunos[coisinho]} é {notas[coisinho]}");
+   for( i = 0 ; i <= 29; i ++){
+       if(notas[i] == 10)
+       maiorNota.Add(notas[i]);
+       alunoMaiorNota.Add(alunos[i]);
    }
-
+    
+    Console.WriteLine($"O aluno com a maior nota é o aluno {alunoMaiorNota} e sua nota é{maiorNota} ");
 }
 TodasNotas();
