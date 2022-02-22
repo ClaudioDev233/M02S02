@@ -124,11 +124,10 @@ void TodasNotas(){
     List <int> notas = new List <int>(); 
     List <string> alunos = new List <string>(); 
 
-    List <int> maiorNota = new List <int>();
     List <string> alunoMaiorNota = new List <string>();
     var nota = 0;
     var aluno = 0;
-    var i = 0;
+    
 
     for( nota = 0 ; nota <= 29; nota ++){ 
      notas.Add(numero.Next(11));
@@ -137,19 +136,34 @@ void TodasNotas(){
    for( aluno = 0 ; aluno <= 29; aluno ++){ 
      alunos.Add("aluno" + aluno);
     }
-   for( i = 0 ; i <= 29; i ++){
-       if(notas[i] == 10)
-       maiorNota.Add(notas[i]);
-       alunoMaiorNota.Add(alunos[i]);
-   }
+
+    // menor/maior notas
+     int menorNotaPossivel = 10;
+    int maiorNotaPossivel = 0;
+  
+  foreach(int notaAluno in notas){
+         if(menorNotaPossivel > notaAluno )
+                 menorNotaPossivel = notaAluno;
+         if(maiorNotaPossivel < notaAluno)
+                 maiorNotaPossivel = notaAluno;
+  }
 
 var media = 0;
    foreach(int todasNotas in notas){
        media+= todasNotas;
-      Console.WriteLine(todasNotas);
+   }
+
+   for( int i = 0 ; i < notas.Count; i++){
+        var notaAtual = notas[i];
+        if(notaAtual == menorNotaPossivel)
+        alunoMaiorNota.Add(alunos[i]);
    }
     
+    var indiceMenorNota = notas.IndexOf(menorNotaPossivel);
+	var indiceMaiorNota = notas.IndexOf(maiorNotaPossivel);
+
+    Console.WriteLine($"O aluno com a menor nota é o {indiceMenorNota} : {menorNotaPossivel}");
+    Console.WriteLine($"O aluno com a maior nota é {indiceMaiorNota} : {maiorNotaPossivel}");
     Console.WriteLine($"A média da turma é : {media/notas.Count}");
-    
 }
 TodasNotas();
